@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Murtaza Hazari | Portfolio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+    /* Header Base */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #004d40;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  transition: all 0.4s ease;
+}
+
+/* Title */
+.header-title {
+  font-size: 2.5em;
+  font-weight: bold;
+  transition: all 0.4s ease;
+}
+
+/* Nav bar */
+.header-nav {
+  margin-top: 10px;
+  transition: all 0.4s ease;
+}
+
+.header-nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* When Scrolled */
+header.scrolled {
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+header.scrolled .header-title {
+  font-size: 1.6em;
+}
+
+header.scrolled .header-nav {
+  margin-top: 0;
+}
+    .hero {
+      padding: 240px;
+      background-color: #99c8c4;
+      text-align: center;
+    }
+    .hero h2 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      color: #555;
+    }
+    .projects {
+      background-color: #ffffff;
+      padding: 110px 20px;
+      text-align: center;
+    }
+    .projects h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .project-item {
+      background: #e0f2f1;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project-item h3 {
+      margin-top: 0;
+    }
+    .services {
+      background-color: #c8e6c9;
+      padding: 75px 20px;
+      text-align: center;
+    }
+    .services h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .service-item {
+      background: #f1f8e9;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .service-item h3 {
+      margin-top: 0;
+    }
+    .contact {
+      background-color: #80cbc4;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .contact p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+    footer {
+      background-color: #004d40;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    footer p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <header id="main-header">
+  <div class="header-title">Murtaza Hazari | Portfolio</div>
+  <nav class="header-nav">
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+  <section class="hero" id="home">
+    <h2>Hello, I'm Murtaza Hazari</h2>
+    <p>Web Developer | Designer | Marketer</p>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>My Projects</h2>
+    <div class="project-item">
+      <h3>Project One</h3>
+      <p>A responsive business website design with interactive features.</p>
+    </div>
+    <div class="project-item">
+      <h3>Project Two</h3>
+      <p>Logo and branding work for a startup with modern aesthetics.</p>
+    </div>
+  </section>
+
+  <section class="services" id="services">
+    <h2>My Services</h2>
+    <div class="service-item">
+      <h3>Website Designing</h3>
+      <p>Clean, modern, responsive websites tailored to your business needs.</p>
+    </div>
+    <div class="service-item">
+      <h3>Logo & Post Design</h3>
+      <p>Unique logos and creative social media post designs that make you stand out.</p>
+    </div>
+    <div class="service-item">
+      <h3>Social Media Marketing</h3>
+      <p>Effective social media strategies to boost engagement and reach your audience.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:murtaza@example.com">murtaza@example.com</a></p>
+    <p>Instagram: <a href="https://instagram.com/yourinsta" target="_blank">@yourinsta</a></p>
+    <p>Youtube: <a href="https://youtube.com/yourchannel" target="_blank">Your Channel</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Murtaza Hazari. All Rights Reserved.</p>
+    <p>Designed by Murtaza Hazari</p>
+  </footer>
+  
+  <script>
+  window.addEventListener('scroll', function () {
+    const header = document.getElementById('main-header');
+    if (window.scrollY > 1) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+</body>
+</html>
