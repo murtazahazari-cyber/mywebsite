@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Murtaza Hazari | Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
   <style>
     html {
       scroll-behavior: smooth;
@@ -14,20 +16,34 @@
       background-color: #f5f5f5;
       color: #333;
     }
+
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #004d40;
+    }
+
     header {
-      background-color: #004d40;
+      background-color: transparent;
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     header h1 {
       margin: 0;
       font-size: 2.5em;
     }
+
     nav {
-      background-color: #00695c;
+      background-color: rgba(0, 105, 92, 0.9);
       padding: 10px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     nav a {
       color: white;
@@ -35,10 +51,13 @@
       text-decoration: none;
       font-weight: bold;
     }
+
     .hero {
       padding: 60px;
-      background-color: #b2dfdb;
+      background-color: rgba(178, 223, 219, 0.9);
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     .hero h2 {
       font-size: 2.5em;
@@ -46,66 +65,75 @@
     }
     .hero p {
       font-size: 1.2em;
-      color: #555;
+      color: #333;
     }
-    .projects {
-      background-color: #ffffff;
+
+    .projects, .services, .contact {
       padding: 60px 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
-    .projects h2 {
+
+    .projects {
+      background-color: #ffffff;
+    }
+    .projects h2,
+    .services h2,
+    .contact h2 {
       font-size: 2em;
       margin-bottom: 20px;
     }
-    .project-item {
+
+    .project-item, .service-item {
       background: #e0f2f1;
       margin: 20px auto;
       padding: 20px;
       max-width: 600px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-    .project-item h3 {
-      margin-top: 0;
+
+    .project-item:hover, .service-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
+
+    .project-item img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
     .services {
       background-color: #c8e6c9;
-      padding: 60px 20px;
-      text-align: center;
     }
-    .services h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+
     .service-item {
       background: #f1f8e9;
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 600px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    .service-item h3 {
-      margin-top: 0;
-    }
+
     .contact {
       background-color: #80cbc4;
-      padding: 60px 20px;
-      text-align: center;
     }
-    .contact h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-    }
+
     .contact p {
       font-size: 1.1em;
       margin: 10px 0;
     }
+
+    .contact i {
+      margin-right: 8px;
+    }
+
     footer {
       background-color: #004d40;
       color: white;
       padding: 20px;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
     footer p {
       margin: 5px 0;
@@ -113,6 +141,8 @@
   </style>
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <header>
     <h1>Murtaza Hazari | Portfolio</h1>
   </header>
@@ -132,10 +162,12 @@
   <section class="projects" id="projects">
     <h2>My Projects</h2>
     <div class="project-item">
+      <img src="project1.jpg" alt="Project One" />
       <h3>Project One</h3>
       <p>A responsive business website design with interactive features.</p>
     </div>
     <div class="project-item">
+      <img src="project2.jpg" alt="Project Two" />
       <h3>Project Two</h3>
       <p>Logo and branding work for a startup with modern aesthetics.</p>
     </div>
@@ -159,9 +191,9 @@
 
   <section class="contact" id="contact">
     <h2>Contact Me</h2>
-    <p>Email: <a href="mailto:murtaza@example.com">murtaza@example.com</a></p>
-    <p>Instagram: <a href="https://instagram.com/yourinsta" target="_blank">@yourinsta</a></p>
-    <p>Youtube: <a href="https://youtube.com/yourchannel" target="_blank">Your Channel</a></p>
+    <p><i class="fas fa-envelope"></i> <a href="mailto:murtaza@example.com">murtaza@example.com</a></p>
+    <p><i class="fab fa-instagram"></i> <a href="https://instagram.com/yourinsta" target="_blank">@yourinsta</a></p>
+    <p><i class="fab fa-youtube"></i> <a href="https://youtube.com/yourchannel" target="_blank">Your Channel</a></p>
   </section>
 
   <footer>
@@ -169,5 +201,38 @@
     <p>Designed by Murtaza Hazari</p>
   </footer>
 
+  <!-- Particles.js -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS('particles-js',
+    {
+      "particles": {
+        "number": { "value": 50 },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": {
+          "enable": true,
+          "speed": 4
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" }
+        }
+      },
+      "retina_detect": true
+    });
+  </script>
 </body>
 </html>
+
